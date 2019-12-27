@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/view_top_bar"
+        layout="@layout/view_activity_bar" />
+
+    <LinearLayout
+        android:id="@+id/ll_menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/view_top_bar"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_in_package_suc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="入库成功(0)"
+            android:textColor="@color/text_color"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/menuCheckColor" />
+
+        <TextView
+            android:id="@+id/tv_in_package_fail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="错放件(0)"
+            android:textColor="@color/text_color"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/menuCheckColor" />
+
+
+        <TextView
+            android:id="@+id/tv_in_package_lack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="缺失件(0)"
+            android:textColor="@color/text_color"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ll_menu"
+        android:background="@color/menuCheckColor" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/vv_bottom"
+        android:layout_below="@+id/ll_menu"
+        android:layout_marginTop="1dp"
+        android:background="@color/white" />
+
+    <View
+        android:id="@+id/vv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/btn_is_in_package"
+        android:layout_marginTop="10dp"
+        android:background="@color/menuCheckColor" />
+
+    <Button
+        android:id="@+id/btn_is_in_package"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimary"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>

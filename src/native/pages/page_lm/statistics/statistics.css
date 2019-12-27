@@ -1,0 +1,94 @@
+.st-app{
+  width: 750px;
+  flex: 1;
+}
+.stDivStartTime{
+  width: 750px;
+  height: 110px;
+  padding-left: 30px;
+  padding-right: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.stFont{
+  font-size: 34px;
+  color:rgba(51,51,51,1);
+}
+.divStime{
+  width:520px;
+  height:72px;
+  border-color:rgba(204,204,204,1);
+  border-radius:10px;
+  padding-right: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.stTime{
+  width: 516px;
+  height: 68px;
+  padding-left: 20px;
+  font-size:34px;
+  color:rgba(51,51,51,1);
+}
+.stIcon{
+  margin-top:23px;
+  margin-left: -40px;
+}
+.stBtn{
+  margin-top: 40px;
+  margin-left: 30px;
+  width:690px;
+  height:88px;
+  background-color:rgba(0,119,226,1);
+  border-radius:5px;
+  text-align: center;
+  line-height: 88px;
+  font-size: 40px;
+  color:rgba(255,255,255,1);
+}
+.stqtFont{
+  margin-top:60px;
+  text-align: center;
+  font-size: 34px;
+  color:rgba(51,51,51,1);
+}
+.stUl{
+  margin-top: 40px;
+  flex: 1;
+}
+.stLi{
+  width: 750px;
+  height: 88px;
+  background-color:rgba(230,230,230,1);
+  flex-direction: row;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(204,204,204,1);
+}
+.stLiFont{
+  text-align: center;
+  line-height: 86px;
+  font-size: 30px;
+  color:rgba(51,51,51,1);
+}
+.w31{
+  width: 232px;
+}
+.w23{
+  width: 172px;
+}
+.stLiFlex{
+  flex: 1;
+}
+.stScroller{
+  flex: 1;
+}
+.bgw{
+  background-color: white;
+}
+.borderTop{
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: rgba(204,204,204,1);
+}

@@ -1,0 +1,47 @@
+.nav_tit{
+    flex-direction: row;
+    height: 226px;
+    padding-top: 50px;
+}
+.nav_tit_sub2{
+    position: absolute;
+    bottom: 34px;
+}
+.border_bottom,
+.border_right{
+    position: absolute;
+    height: 2px;
+    width: 690px;
+    background-color: rgba(210,210,210,1);
+    border-radius: 1px;
+}
+.border_bottom{
+    left: 30px;
+    bottom: 0;
+}
+.border_right{
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 120px;
+}
+.cell{
+    align-items: center;
+    position: relative;
+    flex: 1;
+}
+.pic{
+    align-items: center;
+    width: 250px;
+}
+.iconfont{
+    font-family: iconfont;
+}
+.icon{
+    color: #0677e6;
+}
+.even_numbers{
+    padding-top: 22px;
+    font-size:30px;
+    color:#333;
+}

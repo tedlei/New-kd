@@ -1,0 +1,14 @@
+{
+	"alipay": {
+		"version": "latest",
+		"url": "https://github.com/farwolf2010/alipay"
+	},
+	"audio": {
+		"version": "latest",
+		"url": "https://github.com/farwolf2010/audio"
+	},
+	"wechat": {
+		"version": "latest",
+		"url": "https://github.com/farwolf2010/wechat"
+	}
+}

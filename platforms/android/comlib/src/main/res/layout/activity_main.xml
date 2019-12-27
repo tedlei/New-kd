@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sam.scaner.InAppActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/view_activity_top_bar_no_flash" />
+
+
+    <TextView
+        android:id="@+id/tv_loging_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include" />
+
+    <EditText
+        android:id="@+id/et_phone_num"
+        android:layout_width="match_parent"
+        android:hint="账号"
+        android:layout_marginLeft="30dp"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:text="18716271713"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/tv_loging_data"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_pwd"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:text="123456"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/et_phone_num"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_pwd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="登录"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btn_ex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_login"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="快速入库(快递员)"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_ex"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="快速入库(代办点-快递员同时)"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_scaner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_all"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="代办点"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_out_package"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_scaner"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="退件"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+
+    <Button
+        android:id="@+id/btn_ex_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_out_package"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="搜索(快递员)"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_all_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_ex_search"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="搜索(代办点-快递员同时)"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_all_search"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="搜索(代办点)"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_search"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="start music"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_audio"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onClick"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="start music"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+</RelativeLayout>

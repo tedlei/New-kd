@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'//这里添加
+apply plugin: 'kotlin-android-extensions'//这里添加
+//apply plugin:'android-apt'
+def AAVersion='4.5.2'
+def keystorePropertiesFile = rootProject.file("gradle.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+android {
+    compileSdkVersion 26
+    buildToolsVersion '28.0.2'
+    defaultConfig {
+        applicationId keystoreProperties['appId']
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 2
+        versionName "2.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk{
+            abiFilters "armeabi-v7a","armeabi","x86"
+        }
+    }
+    compileOptions{
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    signingConfigs {
+        releaseConfig {
+            if (properties.containsKey('storeFile') && properties.containsKey('storePassword') &&
+                    properties.containsKey('keyAlias') && properties.containsKey('keyPassword')) {
+                storePassword =keystoreProperties['storePassword']
+                keyAlias = keystoreProperties['keyAlias']
+                keyPassword = keystoreProperties['keyPassword']
+                storeFile = file(keystoreProperties['storeFile'])
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false //去掉不用资源
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
+        }
+        debug {
+         proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+         signingConfig signingConfigs.releaseConfig
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+        jumboMode = true
+        preDexLibraries false
+    }
+    aaptOptions {
+        noCompress 'wasm'
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir(['libs'])
+            java {
+                srcDirs = ["src/main/java", "src/main/java_zxing"];
+            }
+        }
+    }
+}
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven{url 'https://jitpack.io'}
+        mavenCentral()
+        maven {url 'http://developer.huawei.com/repo'}
+        maven { url 'https://fabric-artifacts.s3.amazonaws.com/public' }
+        maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
+    api "org.androidannotations:androidannotations-api:$AAVersion"
+    api project(':farwolf.weex')
+    api 'com.sam.scaner:scanerlib:1.0'
+//    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api project(':alipay')
+    api project(':audio')
+    api project(':comlib')
+//    api "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"//主要是这两个依赖
+    api "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"//主要是这两个依赖
+    api project(':wechat')
+}

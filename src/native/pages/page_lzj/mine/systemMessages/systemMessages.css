@@ -1,0 +1,118 @@
+.list {
+  padding-top: 28px;
+  padding-left: 28px;
+}
+.footer {
+  width: 750px;
+  height: 124px;
+  background-color: rgba(0, 119, 226, 1);
+  opacity: 1;
+}
+.count {
+  position: absolute;
+  right: 136px;
+  color: #fff;
+  font-size: 28px;
+}
+.list_bottom_text {
+  word-wrap: anywhere;
+  color: #999999;
+  font-size: 30px;
+  line-height: 44px;
+}
+.list_bottom_sub {
+  position: absolute;
+  left: -6px;
+}
+.list_option,
+.list_option2{
+  width: 40px;
+  height: 40px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(102, 102, 102, 1);
+  border-radius: 20px;
+}
+.list_option{
+  position: absolute;
+  top: 26px;
+  right: 30px;
+}
+.list_option2{
+  margin-left: 100px;
+  margin-right: 20px;
+}
+.checked {
+  border-color: transparent;
+  background-color: #0077e2;
+}
+
+/*  选中后底部 */
+.footer2 {
+  flex-direction: row;
+  width: 750px;
+  height: 124px;
+}
+.footer_left,
+.footer_right {
+  flex: 1;
+  opacity: 1;
+}
+.footer_left {
+  flex-direction: row;
+  align-items: center;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: rgba(204, 204, 204, 1);
+}
+.footer_right {
+  height: 124px;
+  background-color: #0077e2;
+  color: #fff;
+  font-size: 44px;
+  text-align:center;
+  line-height: 124px;
+}
+.footer:active{
+  opacity: .5;
+}
+.footer_left:active{
+  opacity: .5;
+}
+.footer_right:active{
+  opacity: .5;
+}
+
+
+.msgList{
+  padding-top: 28px;
+  padding-left: 28px;
+}
+.pic{
+  width: 80px;
+  height: 78px;
+  margin-right: 32px;
+}
+.msgList_option{
+  flex-direction: row;
+  width: 722px;
+  padding-bottom: 38px;
+}
+.msgList_option_text{
+  max-width: 444px;
+  padding-top: 16px;
+  padding-right: 24px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+  color: #fff;
+  font-size: 26px;
+}
+.msgList_option_icon{
+  position: absolute;
+  top: 4px;
+  left: 90px;
+  color: #0077e2;
+  font-size: 28px;
+  font-family: iconfont;
+  transform: rotate(180deg);
+}

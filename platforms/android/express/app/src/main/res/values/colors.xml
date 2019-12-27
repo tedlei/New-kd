@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    颜色值 改成你们的颜色值 -->
+    <color name="colorPrimary">#0077e2</color>
+    <color name="colorPrimaryDark">#0077e2</color>
+    <color name="colorAccent">#036FCF</color>
+</resources>
